@@ -1,0 +1,126 @@
+    .productgrid {
+        margin: 100px 100px;
+    }
+    
+    .productgridTitle {
+        font-size: 2.5rem;
+        font-family: 'Poppins', Poppins-Bold;
+    }
+    
+    .productNav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        overflow: hidden;
+        margin-top: 15px;
+    }
+    
+    .navLinks {
+        display: flex;
+        align-items: center;
+    }
+    
+    .navLinksOption {
+        position: relative;
+        color: #333;
+        margin-right: 30px;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        font-family: 'Poppins', Poppins-Regular;
+        font-size: 1rem;
+    }
+    
+    .navLinksOption::after {
+        content: '';
+        position: absolute;
+        height: 2px;
+        width: 0;
+        bottom: -30px;
+        background: #333;
+        left: 0;
+    }
+    
+    .divButton:hover .navLinksOption::after {
+        animation: hoverButton 0.4s 0.1s linear forwards;
+    }
+    
+    .NavOptions {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .filterButton,
+    .searchButton {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: none;
+        padding: 15px;
+        width: 100px;
+        font-size: 1rem;
+        color: #333;
+        border-radius: 3px;
+        margin-right: 25px;
+        cursor: pointer;
+        background: #d6d6d6;
+    }
+    
+    .filterButton:hover,
+    .searchButton:hover {
+        border-color: #717fe0;
+        background-color: #717fe0;
+        color: #fff;
+        transition: 0.7s all;
+    }
+    
+    @keyframes hoverButton {
+        from {
+            bottom: -30px;
+            width: 0;
+        }
+        to {
+            bottom: 0px;
+            width: 100%;
+        }
+    }
+    
+    .productsBody {
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        margin-top: 70px;
+        gap: 50px;
+    }
+    
+    .productbody {
+        position: relative;
+    }
+    
+    .productImg {
+        width: 100%;
+    }
+    
+    .productImg:hover {
+        transform: scale(1.2);
+        transition: 0.3s all;
+    }
+    
+    .productprice {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    .productpriceNember {
+        color: #333;
+        font-size: 0.9rem;
+    }
+    
+    .favoriteIcon {
+        color: #333;
+    }
+    
+    .favoriteIcon:hover {
+        color: #6c7ae0;
+    }

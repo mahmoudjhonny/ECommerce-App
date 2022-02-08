@@ -1,0 +1,139 @@
+.navBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 999999;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style-type: none;
+}
+
+.menuLinks {
+    display: flex;
+    flex-direction: row;
+}
+
+.leftside {
+    display: flex;
+}
+
+h2.title {
+    text-transform: uppercase;
+}
+
+.title_identfier {
+    font-weight: 600;
+}
+
+.menulist {
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+}
+
+.menuItem {
+    margin-left: 25px;
+}
+
+.menuItem:hover,
+.iconMenuItem:hover,
+.menuToggle:hover {
+    color: #6c7ae0;
+}
+
+.rightside {
+    display: flex;
+    margin-left: 20px;
+}
+
+.iconMenu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+li.iconMenuItem {
+    color: #333;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+.menuToggle {
+    display: none;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .menuItem {
+        padding-bottom: 25px;
+    }
+    .menulist {
+        flex-direction: column;
+        margin-left: 0;
+    }
+    .menuToggle {
+        display: block;
+    }
+    .leftside {
+        align-items: center;
+        justify-content: center;
+        margin-top: 30px;
+        font-size: 3vh;
+    }
+    .menuLinks {
+        position: fixed;
+        top: 48px;
+        right: 0;
+        flex-direction: column;
+        background-color: #fff;
+        height: 93vh;
+        width: 50%;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+        z-index: 9999;
+    }
+    .rightside {
+        display: block;
+        position: absolute;
+        bottom: 0;
+        right: 50%;
+        left: 50%;
+        margin-left: 0;
+    }
+    li.iconMenuItem:first-child {
+        margin-left: 0;
+    }
+    .animateclass {
+        opacity: 0;
+    }
+}
+
+.nav-active {
+    transform: translateX(0%);
+}
+
+@media (max-width: 426px) {
+    .menuLinks {
+        width: 100%;
+    }
+}
+
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateX(50%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0%);
+    }
+}

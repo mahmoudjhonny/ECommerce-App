@@ -1,0 +1,161 @@
+.sliderContainer {
+    position: relative;
+}
+
+.SliderImage {
+    width: 100%;
+    animation: imageAnimate 1s linear;
+}
+
+.prevArrow {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    color: #333;
+}
+
+.nextArrow {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    color: #333;
+}
+
+.arrowIcon {
+    cursor: pointer;
+    z-index: 5;
+}
+
+.arrowIcon:hover {
+    color: #6c7ae0;
+}
+
+.sliderInfo {
+    position: absolute;
+    left: 10%;
+    top: 39%;
+    animation: titleAnimation 1s linear;
+}
+
+.sliderInfo_2 {
+    position: absolute;
+    left: 10%;
+    top: 50%;
+    animation: textAnimation 1s linear;
+}
+
+.buyButton {
+    color: #fff;
+    background-color: #6c7ae0;
+    border: none;
+    padding: 15px;
+    width: 166px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 17px;
+    position: absolute;
+    top: 60%;
+    left: 10%;
+    animation: buttonAnimation 0.6s ease-in;
+}
+
+.buyButton:hover {
+    background-color: #000;
+}
+
+.sliderInfoTitle {
+    font-family: Poppins-Regular;
+    font-size: 5vh;
+    color: #333;
+    font-weight: 400;
+}
+
+.sliderInfoText {
+    font-family: PlayfairDisplay-Bold;
+    font-size: 6vh;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    margin-left: 22px;
+    margin-bottom: 6px;
+    font-weight: 500;
+}
+
+@keyframes imageAnimate {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes buttonAnimation {
+    from {
+        opacity: 0;
+        transform: rotate(270deg);
+    }
+    to {
+        opacity: 1;
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes titleAnimation {
+    from {
+        opacity: 0;
+        left: 0;
+    }
+    to {
+        opacity: 1;
+        left: 10%;
+    }
+}
+
+@keyframes textAnimation {
+    from {
+        opacity: 0;
+        top: 0;
+    }
+    to {
+        opacity: 1;
+        top: 50%;
+    }
+}
+
+@media (max-width: 1024px) {
+    .buyButton {
+        margin-top: 8px;
+    }
+}
+
+@media (max-width: 768px) {
+    .buyButton {
+        width: 206px;
+    }
+}
+
+@media (max-width: 426px) {
+    .buyButton {
+        width: 150px;
+        margin-left: 23px;
+        padding: 9px;
+    }
+    .sliderInfoText {
+        font-size: 3vh;
+    }
+    .sliderInfoTitle {
+        font-size: 3vh;
+    }
+}
+
+@media (max-width: 320px) {
+    .buyButton {
+        width: 119px;
+        margin-left: 28px;
+        padding: 4px;
+    }
+}
