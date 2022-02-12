@@ -6,7 +6,7 @@ import ArrowRightIcon from '@mui/icons-material/ArrowRight';
 
 const Slider = () => { 
     const [current, setcurrent] = useState(0);
-    const sliderLength = images.length; 
+    const sliderLength = images.length;
 
     // useEffect(() => {
     //         setInterval(() => {
@@ -43,7 +43,7 @@ const Slider = () => {
                     >
                         {index === current && (
                             <>
-                                <img src={imgs.imageUrl} alt={imgs.id} className='SliderImage'/>
+                                <img src={imgs.imageUrl} width='100%' height='100%' alt={imgs.id} className='SliderImage'/>
                                 <div className='sliderInfo'>
                                     <h3 className='sliderInfoTitle'>{imgs.title}</h3>
                                 </div>

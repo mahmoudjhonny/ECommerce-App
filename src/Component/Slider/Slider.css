@@ -3,7 +3,6 @@
 }
 
 .SliderImage {
-    width: 100%;
     animation: imageAnimate 1s linear;
 }
 

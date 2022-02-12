@@ -1,0 +1,81 @@
+.productContainear {
+    margin: 40px 65px;
+    display: flex;
+    align-items: flex-start;
+}
+
+.productDetailedContainear {
+    margin-left: 160px;
+}
+
+.productCategory {
+    font-family: 'Roboto', sans-serif;
+    font-size: 25px;
+    text-transform: uppercase;
+    color: #8c8282;
+}
+
+.DetailedproductTitle {
+    margin: 14px 0;
+    font-size: 38px;
+    color: #474747;
+    font-weight: 500;
+}
+
+p.lead {
+    font-size: 23px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.productPrice {
+    font-size: 31px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.productDatailed {
+    margin-bottom: 15px;
+    color: #333;
+    font-size: 15px;
+    width: 85%;
+}
+
+.buttonsClass {
+    display: flex;
+    align-items: center;
+    margin-top: 25px;
+    margin-left: 15px;
+}
+
+.button {
+    padding: 15px;
+    width: 158px;
+    border-radius: 6px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 1s all;
+}
+
+.addtocart {
+    margin-right: 30px;
+    color: #000;
+    background-color: transparent;
+}
+
+.gotocart {
+    color: #fff;
+    background-color: #000;
+}
+
+.addtocart:hover {
+    color: #fff;
+    background-color: #000;
+}
+
+.gotocart:hover {
+    color: #000;
+    background-color: transparent;
+}

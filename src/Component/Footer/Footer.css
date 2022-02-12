@@ -1,0 +1,110 @@
+    .footerBody {
+        background: #222;
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+    }
+    
+    .footerBody>div {
+        padding: 30px;
+        margin-top: 30px;
+        margin-left: 60px;
+    }
+    
+    .footerBody>div>h3 {
+        text-transform: uppercase;
+        color: #fff;
+        font-size: 15px;
+        font-family: 'Montserrat', Montserrat-Bold;
+    }
+    
+    .footerSectionList {
+        margin-top: 20px;
+    }
+    
+    .footerSectionListItem {
+        padding-bottom: 20px;
+    }
+    
+    .footerSectionListItemLink {
+        color: #b2b2b2;
+        font-size: 13px;
+        transition: 0.5s all;
+    }
+    
+    .footerSectionListItemLink:hover {
+        color: #717fe0;
+    }
+    
+    .about {
+        color: #b2b2b2;
+        margin-top: 20px;
+        font-size: 15px;
+    }
+    
+    .footerSocialList {
+        display: flex;
+        margin-top: 20px;
+        align-items: center;
+    }
+    
+    .footerSocialListItemLink {
+        margin-right: 20px;
+        transition: 0.5s all;
+    }
+    
+    .footerSocialListItemLink:hover {
+        color: #717fe0;
+    }
+    
+    input[type="email"] {
+        display: block;
+        background: transparent;
+        border: none;
+        width: 72%;
+        outline: 0;
+        margin: 20px 0;
+        height: 35px;
+        color: #fff;
+        padding: 10px;
+        border-bottom: 2px solid #717fe0;
+    }
+    
+    .subscribebutton {
+        border: none;
+        background: #717fe0;
+        font-family: 'Popiens', Poppins-Medium;
+        padding: 10px;
+        color: #fff;
+        border-radius: 50px;
+        width: 142px;
+        height: 48px;
+        text-transform: uppercase;
+        cursor: pointer;
+        transition: 0.7s ease-in;
+    }
+    
+    .subscribebutton:hover {
+        color: #717fe0;
+        background-color: #fff;
+    }
+    
+    @keyframes inputBorder {
+        from {
+            width: 0%;
+        }
+        to {
+            width: 72%;
+        }
+    }
+    
+    @media (max-width: 768px) {
+        .footerBody {
+            grid-template-columns: auto auto;
+        }
+    }
+    
+    @media (max-width: 426px) {
+        .footerBody {
+            grid-template-columns: auto;
+        }
+    }
