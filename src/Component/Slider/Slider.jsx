@@ -1,6 +1,6 @@
 import './Slider.css';
 import { images } from '../../sliderData'
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import ArrowLeftIcon from '@mui/icons-material/ArrowLeft';
 import ArrowRightIcon from '@mui/icons-material/ArrowRight';
 
