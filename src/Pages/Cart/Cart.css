@@ -1,0 +1,60 @@
+.cartComponent {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 50px 80px;
+}
+
+.cartLeft {
+    flex-grow: 2;
+}
+
+.imageContainear {
+    width: 60px;
+    position: relative;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+img {
+    vertical-align: middle;
+    border-style: none;
+}
+
+.minusSign,
+.plusSign {
+    width: 45px;
+    height: 100%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    transition: 0.8s all;
+}
+
+.minusSign:hover,
+.plusSign:hover {
+    color: #fff;
+    background-color: #6c7ae0;
+}
+
+.inputQuantity {
+    display: flex;
+    width: 140px;
+    height: 45px;
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+}
+
+.numberInput {
+    width: calc(100% - 90px);
+    height: 100%;
+    border-left: 1px solid #e6e6e6;
+    border-right: 1px solid #e6e6e6;
+    background-color: #f7f7f7;
+    border: none;
+    text-align: center;
+}
+
+.cartRight {
+    flex-grow: 1;
+}

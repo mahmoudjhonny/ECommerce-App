@@ -1,19 +1,10 @@
 import './Products.css';
-import { useEffect, useState } from 'react';
 import ProductGridPage from '../ProductGrid/productGridPage'
-import { connect } from 'react-redux';
-import { fetchProducts } from '../../Redux/Actions/productActions';
 import Skeletonelements from '../../Skeletons/skeletonElements';
+import { useSelector } from 'react-redux';
 
-const Productgrid = ({fetchProducts, products}) => {
-    const [active, setActive] = useState('All');
-    useEffect(() => {
-        fetchProducts()
-    },[])
-
-
-    const allCategories = ['All', ...new Set(products.products.map(product => product.category))];
-    
+const Productgrid = () => {
+    const products = useSelector(state => state.product)
     return (
         <div className='productgrid'>
             <h1 className='productgridTitle'>PRODUCT OVERVIEW</h1>
@@ -21,23 +12,11 @@ const Productgrid = ({fetchProducts, products}) => {
             <h1>{products.error}</h1>
         ): (
         <>
-            <ProductGridPage active={active} products={products} allCategories={allCategories} setActive={setActive}/>
+            <ProductGridPage/>
         </>
         )}
         </div>
         );
 }
 
-const mapStateToProps = (state) => {
-    return {
-        products: state.product
-    }
-}
-
-const mapDispatchToProps = (dispatch) => {
-    return {
-        fetchProducts: () => dispatch(fetchProducts())
-    }
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(Productgrid);
+export default Productgrid;

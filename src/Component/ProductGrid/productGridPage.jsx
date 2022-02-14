@@ -1,10 +1,16 @@
-import React from 'react';
+import './productGridPage.css'
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import SearchIcon from '@mui/icons-material/Search';
 import FilterListIcon from '@mui/icons-material/FilterList';
-import { NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import { useSelector } from 'react-redux'
+import { useState } from 'react';
 
-const productGridPage = ({active, products, allCategories, setActive}) => {
+const ProductGridPage = () => {
+    const [active, setActive] = useState('All');
+    const products = useSelector(state => state.product);
+    const allCategories = ['All', ...new Set(products.products.map(product => product.category))];
+
     return (
         <>
             <nav className='productNav'>
@@ -20,11 +26,12 @@ const productGridPage = ({active, products, allCategories, setActive}) => {
                     <button className="searchButton"><SearchIcon/>  Search</button>
                 </div>
             </nav>
+
             <div className="productsBody">
                 {active === 'All' ? products.products.map(products => (
                     <div className='productbody' key={products.id}>
                             <img src={products.image} className='productImg' alt={products.category}/>
-                            <NavLink to={`product/${products.id}`} className='quickView'>Quick View</NavLink>
+                            <Link to={`/${products.id}`} className='quickView'>Quick View</Link>
                             <p className="productTitle">{products.title}</p>
                             <div className="productprice">
                                 <p className="productpriceNember">{products.price} $</p>
@@ -37,7 +44,7 @@ const productGridPage = ({active, products, allCategories, setActive}) => {
                     (products.category === active) && (
                         <div className='productbody' key={products.id}>
                             <img src={products.image} className='productImg' alt={products.category}/>
-                            <NavLink to={`product/${products.id}`} className='quickView'>Quick View</NavLink>
+                            <Link to={`/${products.id}`} className='quickView'>Quick View</Link>
                             <p className="productTitle">{products.title}</p>
                             <div className="productprice">
                                 <p className="productpriceNember">{products.price} $</p>
@@ -52,4 +59,4 @@ const productGridPage = ({active, products, allCategories, setActive}) => {
     );
 }
 
-export default productGridPage;
+export default ProductGridPage;

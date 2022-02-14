@@ -3,10 +3,21 @@ import SearchIcon from '@mui/icons-material/Search';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import PersonIcon from '@mui/icons-material/Person';
 import MenuIcon from '@mui/icons-material/Menu';
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import './NavBar.css'
+import { useEffect, useState } from 'react';
+import { useSelector } from 'react-redux';
 
 const Navbar = () => {
+    const [count, setCount] = useState(0);
+    const cart = useSelector(state => state.cart);
+
+    useEffect(() => {
+        let count = 0;
+        cart.cart.forEach((item) => 
+            count += item.qty)
+        setCount(count)
+    }, [cart, count])
 
     const activeLink = ({isActive}) => {
         return {
@@ -53,8 +64,9 @@ const Navbar = () => {
                                 <SearchIcon/>
                             </li>
                             <li className="iconMenuItem animateclass">
-                                <ShoppingCartIcon/>
+                                <Link to='/cart' className='iconMenuItem cart'><ShoppingCartIcon/></Link> 
                             </li>
+                            <div className='qty_count'>{count}</div>
                             <li className="iconMenuItem animateclass">
                                 <FavoriteBorderIcon/>
                             </li>

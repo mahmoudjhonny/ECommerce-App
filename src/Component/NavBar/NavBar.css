@@ -67,6 +67,25 @@ li.iconMenuItem {
     cursor: pointer;
 }
 
+.cart {
+    color: #333;
+}
+
+.qty_count {
+    background-color: #6c7ae0;
+    color: #fff;
+    font-size: 13px;
+    width: 15px;
+    height: 15px;
+    border-radius: 25px;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 3px;
+    right: 101px;
+}
+
 .menuToggle {
     display: none;
     cursor: pointer;

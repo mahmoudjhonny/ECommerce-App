@@ -5,6 +5,7 @@ import Navbar from './Component/NavBar/NavBar';
 import Productpage from './Component/productPage/productPage';
 import Shop from './Pages/Shop/Shop';
 import Home from './Pages/Home/Home';
+import Cart from './Pages/Cart/Cart'
 
 function App() {
     return ( 
@@ -13,7 +14,8 @@ function App() {
             <Routes>
                 <Route path = '/' element = {<Home />}/> 
                 <Route path='/shop' element={<Shop />}/>
-                <Route path= 'product/:id' element={<Productpage/>}/>
+                <Route path='/cart' element={<Cart />}/>
+                <Route path= '/:id' element={<Productpage/>}/>
             </Routes>
             <Footer />
         </> 

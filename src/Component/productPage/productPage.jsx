@@ -2,10 +2,13 @@ import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import StarIcon from '@mui/icons-material/Star';
 import './productPage.css';
+import {addToCart} from '../../Redux/Actions/cartActions'
+import { useDispatch } from 'react-redux';
 
 const Productpage = () => {
     const {id} = useParams();
     const [product, setproduct] = useState([]);
+    const dispatch =  useDispatch();
     useEffect(() => {
         fetch(`https://fakestoreapi.com/products/${id}`)
             .then(res=>res.json())
@@ -36,7 +39,7 @@ const Productpage = () => {
                 </h5>
 
                 <div className="buttonsClass">
-                    <button className="addtocart button">Add To Cart</button>
+                    <button className="addtocart button" onClick={() => dispatch(addToCart(product.id))}>Add To Cart</button>
                     <button className="gotocart button">Go To Cart</button>
                 </div>
             </div>
