@@ -20,7 +20,7 @@ const Skeletonelements = () => {
                         </div>
                     </div>
             ))} 
-                           </div>
+            </div>
         </>
     );
 }

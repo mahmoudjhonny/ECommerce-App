@@ -43,6 +43,7 @@ var fetchProducts = function fetchProducts() {
 
     _axios["default"].get('https://fakestoreapi.com/products').then(function (res) {
       var products = res.data;
+      console.log(products);
       dispatch(fetchProductSuccess(products));
     })["catch"](function (error) {
       dispatch(fetchProductFailuar(error.massage));

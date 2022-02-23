@@ -13,7 +13,7 @@ const Productpage = () => {
         fetch(`https://fakestoreapi.com/products/${id}`)
             .then(res=>res.json())
             .then(product => setproduct(product))
-    },[]);
+    },[id]);
 
     return (
         <div className='productContainear'>

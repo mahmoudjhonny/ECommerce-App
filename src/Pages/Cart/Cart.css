@@ -1,12 +1,15 @@
-.cartComponent {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 50px 80px;
+.cartContainear {
+    display: grid;
+    grid-template-columns: auto auto;
+    margin: 40px 35px;
 }
 
-.cartLeft {
-    flex-grow: 2;
+.hoverParent {
+    transition: 0.8s ease-in-out;
+}
+
+.tableContainer {
+    margin-right: 15px;
 }
 
 .imageContainear {
@@ -14,6 +17,21 @@
     position: relative;
     margin-right: 20px;
     cursor: pointer;
+}
+
+.hoverParent:hover .imageContainear::after {
+    content: 'x';
+    position: absolute;
+    background-color: rgb(255, 0, 0, 50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    left: 0%;
+    height: 100%;
+    width: 100%;
+    font-size: 20px;
+    animation: hoverImage 0.8s forwards;
 }
 
 img {
@@ -38,23 +56,159 @@ img {
 }
 
 .inputQuantity {
-    display: flex;
-    width: 140px;
-    height: 45px;
     border: 1px solid #e6e6e6;
     border-radius: 3px;
+    width: 50%;
 }
 
 .numberInput {
-    width: calc(100% - 90px);
-    height: 100%;
     border-left: 1px solid #e6e6e6;
     border-right: 1px solid #e6e6e6;
     background-color: #f7f7f7;
     border: none;
     text-align: center;
+    padding: 10px;
+    width: 100%;
 }
 
-.cartRight {
-    flex-grow: 1;
+.processConatinear {
+    box-shadow: 0px 0px 0px 1px rgb(0 0 0 / 15%);
+    -webkit-box-shadow: 0px 0px 0px 1px rgb(0 0 0 / 15%);
+    -moz-box-shadow: 0px 0px 0px 1px rgb(0 0 0 / 15%);
+    border-radius: 5px;
+}
+
+.processElement {
+    padding: 35px;
+}
+
+.processHeader {
+    font-size: 4vh;
+    color: #333;
+    font-family: 'Poppins', Poppins-Bold;
+    font-weight: 600;
+    margin-bottom: 35px;
+}
+
+.totalContainear {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.text {
+    font-size: 2vh;
+    color: #333;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+}
+
+.desc_total {
+    font-size: 2vh;
+    width: 70%;
+    color: #333;
+}
+
+.desc {
+    font-size: 2vh;
+    width: 70%;
+    color: #333;
+}
+
+.shippingContainear {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+.descText {
+    font-size: 2vh;
+    color: #555;
+}
+
+.calculateshipping {
+    margin-top: 15px;
+}
+
+.selectShip {
+    margin-top: 15px;
+}
+
+#selectCountry {
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.inputField {
+    display: block;
+    margin-top: 15px;
+    padding: 15px;
+    width: 100%;
+}
+
+.update_btn {
+    color: #000;
+    padding: 15px;
+    margin-top: 15px;
+    width: 100%;
+    background: #f3f3f3;
+    border-radius: 45px;
+    border: none;
+    font-size: 15px;
+    transition: 0.8s all;
+}
+
+.update_btn:hover,
+.process_btn:hover {
+    background-color: #6c7ae0;
+    color: #fff;
+}
+
+.borderDiv {
+    border-bottom: 1px dotted #555;
+    margin-top: 15px;
+}
+
+.process_btn {
+    color: #fff;
+    padding: 15px;
+    margin: 25px;
+    width: 100%;
+    background: #333;
+    border-radius: 45px;
+    border: none;
+    font-size: 15px;
+    transition: 0.8s all;
+}
+
+@media (max-width: 1024px) {
+    .cartContainear {
+        grid-template-columns: auto;
+    }
+    .processConatinear {
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 426px) {
+    .cartContainear {
+        display: block;
+    }
+}
+
+@media (max-width: 320px) {
+    .desc_total {
+        width: 20%
+    }
+}
+
+@keyframes hoverImage {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
 }
