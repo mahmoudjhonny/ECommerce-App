@@ -1,0 +1,235 @@
+.blogHeader {
+    background-image: url('https://preview.colorlib.com/theme/cozastore/images/xbg-02.jpg.pagespeed.ic.AbxTEdPgYH.webp');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    text-align: center;
+    padding: 92px 15px;
+}
+
+.blogHeaderTitle {
+    font-size: 5vh;
+    color: #fff;
+    font-family: 'Poppins', Poppins-Bold;
+    font-weight: bold;
+}
+
+.blogSection {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 60px;
+    padding-bottom: 60px;
+}
+
+.blogSectionRight {
+    flex: 0 0 66.666667;
+    max-width: 66.666667%;
+    padding: 0 15px;
+    margin-right: 15px;
+    width: 100%;
+}
+
+.sectionContainear {
+    padding-right: 0;
+}
+
+.arrg {
+    margin-bottom: 60px;
+}
+
+.sectionContainearImage {
+    overflow: hidden;
+}
+
+.ImageSrc {
+    width: 100%;
+    position: relative;
+    transition: transform 0.9s ease;
+}
+
+.sectionContainearImage:hover .ImageSrc {
+    transform: scale(1.1);
+}
+
+.date {
+    position: absolute;
+    background-color: rgba(255, 255, 255, .9);
+    width: 70px;
+    min-height: 70px;
+    left: 100px;
+    bottom: 263px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.dateDay {
+    font-family: 'Poppins', Poppins-Bold;
+    font-weight: bold;
+    font-size: 30px;
+    color: #333;
+}
+
+.dateMon {
+    color: #333;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.itemInfo {
+    padding-top: 30px;
+}
+
+.itemInfoTitle {
+    padding-bottom: 15px;
+}
+
+.itemInfoLink {
+    color: #333;
+    font-family: 'Poppins', Poppins-Bold;
+    font-weight: bold;
+    font-size: 26px;
+    transition: 0.8s all;
+}
+
+.itemInfoLink:hover {
+    color: #6c7ae0;
+}
+
+.itemInfoText {
+    color: #888;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.itemInfoDesc {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 13px;
+    font-family: 'Poppins', sans-serif;
+    padding-top: 10px;
+    color: #333;
+}
+
+.by {
+    color: #888;
+}
+
+.read {
+    display: flex;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    color: #333;
+    font-size: 15px;
+    text-transform: uppercase;
+    transition: 0.9s all;
+}
+
+.read:hover {
+    color: #6c7ae0;
+}
+
+.searchContainear {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.searchbar {
+    padding: 20px;
+    border-radius: 45px;
+    border: none;
+    color: #333;
+    border: 1px solid #e6e6e6;
+    outline: none;
+    font-size: 15px;
+    width: 100%;
+    height: 50px;
+}
+
+.searchIcon {
+    color: #333;
+    font-size: 18px !important;
+    left: 191px;
+    position: absolute;
+}
+
+.categoryContainear {
+    padding: 10px;
+    margin-top: 15px;
+}
+
+.categoryTitle {
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    border-bottom: 1px solid #e6e6e6;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+}
+
+.catListItems {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    border-bottom: 1px solid #e6e6e6;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+    transition: 0.9s all;
+    cursor: pointer;
+}
+
+.catListItems:hover {
+    transform: translateX(10px);
+    color: #6c7ae0;
+}
+
+.ArchiveContainear {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    border-bottom: 1px solid #e6e6e6;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+    transition: 0.9s all;
+    cursor: pointer;
+}
+
+.ArchiveContainear:hover {
+    transform: translateX(10px);
+    color: #6c7ae0;
+}
+
+@media (max-width: 768px) {
+    .blogSectionRight {
+        max-width: 100%;
+    }
+    .blogSectionLeft {
+        width: 100%;
+    }
+    .searchIcon {
+        left: 95%;
+    }
+}
+
+@media (max-width: 426px) {
+    .searchIcon {
+        left: 90%;
+    }
+    .itemInfoDesc {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 376px) {
+    .searchIcon {
+        left: 85%;
+    }
+}

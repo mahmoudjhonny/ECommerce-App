@@ -3,7 +3,7 @@
     justify-content: space-between;
     align-items: center;
     background-color: #fff;
-    padding: 10px 20px;
+    padding: 20px 20px;
     position: sticky;
     top: 0;
     z-index: 999999;
@@ -82,7 +82,7 @@ li.iconMenuItem {
     display: flex;
     align-items: center;
     justify-content: center;
-    top: 3px;
+    top: 13px;
     right: 101px;
 }
 
