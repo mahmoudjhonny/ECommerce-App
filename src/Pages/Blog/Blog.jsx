@@ -16,13 +16,13 @@ const Blog = () => {
                         {news.map((item, i) => (
                             <div className='arrg' key={i}>
                                 <div className="sectionContainearImage">
-                                    <Link to='#' className='imageLink'>
+                                    <Link to='/detailed' className='imageLink'>
                                         <img src={item.image_url} alt={item.title} className='ImageSrc' />
                                     </Link>
                                 </div>
                                 <div className="itemInfo">
                                     <h4 className="itemInfoTitle">
-                                        <Link className='itemInfoLink' to='#'>
+                                        <Link className='itemInfoLink' to='/detailed'>
                                             {item.title}
                                         </Link>
                                     </h4>
@@ -33,7 +33,7 @@ const Blog = () => {
                                         <span className="admin">
                                             <span className='by'>By </span> 
                                             {item.creator} | {item.category} | {item.comments} Comments</span>
-                                        <a href="#" className="read">CONTINUE READING  <ArrowRightAltIcon/></a>
+                                        <Link to='/detailed' className="read">CONTINUE READING  <ArrowRightAltIcon/></Link>
                                     </div>
                                 </div>
                             </div>
