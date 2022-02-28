@@ -6,21 +6,19 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
-import RemoveIcon from '@mui/icons-material/Remove';
-import AddIcon from '@mui/icons-material/Add';
 import { useDispatch, useSelector } from 'react-redux';
 import { useState, useEffect } from 'react';
-import { removeFromCart } from '../../Redux/Actions/cartActions';
+import Cartpage from '../../Component/cartPage/cartPage';
+
 
 const Cart = () => {
 
     const [totalPrice, setTotalPrice] = useState(0);
     const [totalItems, settotalItems] = useState(0);
-    const cart = useSelector(state => state.cart.cart)
-    const products = useSelector(state => state.product.products)
+    const {cart} = useSelector(state => state.cart)
+    const {products} = useSelector(state => state.product)
     const dispatch = useDispatch()
-    const [input, setInput] = useState(5)
-    
+
     useEffect(() => {
            let items = 0;
            let price = 0;
@@ -33,13 +31,6 @@ const Cart = () => {
            setTotalPrice(price);
            settotalItems(items);
     },[products, cart, totalPrice, totalItems, setTotalPrice, settotalItems])
-
-    const handleChange = (e) => {
-        setInput(e.target.value);
-    }
-
-    console.log(input)
-    
 
     return (
         <div className="cartContainear">
@@ -57,23 +48,7 @@ const Cart = () => {
                         </TableHead>
                         <TableBody>
                             {cart.map((item) => (
-                            <TableRow sx={{ '&:last-child td, &:last-child th': { border: 0 } }} key={item.id}>
-                                <TableCell component="th" scope="row">
-                                    <div className="hoverParent" onClick={(id) => dispatch(removeFromCart(item.id))}>
-                                        <div className="imageContainear">
-                                            <img src={products[item.id - 1].image} alt={products[item.id - 1].title} className="tableImage" width='100%' />
-                                        </div>
-                                    </div>
-                                </TableCell>
-                                <TableCell align="left">{products[item.id - 1].title}</TableCell>
-                                <TableCell align="left">{products[item.id - 1].price}</TableCell>
-                                <TableCell align="right">
-                                    <div className="inputQuantity">
-                                        <input type="number" className="numberInput" value={1} onChange={handleChange}/>
-                                    </div>
-                                </TableCell>
-                                <TableCell align="left">{item.qty * products[item.id - 1].price}</TableCell>
-                            </TableRow>
+                                <Cartpage key={item.id} item={item} products={products} dispatch={dispatch}/>
                             ))}
                         </TableBody>
                     </Table>

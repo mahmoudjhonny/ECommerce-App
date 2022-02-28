@@ -1,4 +1,8 @@
-import { ADD_ITEM, ADJUST_QTY, DEL_ITEM, LOAD_CURRENT_ITEM } from '../ActionTypes/productActionTypes'
+import {
+    ADD_ITEM,
+    ADJUST_QTY,
+    DEL_ITEM,
+} from '../ActionTypes/productActionTypes'
 export const addToCart = (itemId) => {
     return {
         type: ADD_ITEM,
@@ -24,12 +28,5 @@ export const adjustQty = (itemId, value) => {
             id: itemId,
             qty: value,
         }
-    }
-}
-
-export const loadCurrentItem = (item) => {
-    return {
-        type: LOAD_CURRENT_ITEM,
-        payload: item
     }
 }

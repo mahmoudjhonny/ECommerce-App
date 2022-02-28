@@ -3,6 +3,7 @@ import FacebookIcon from '@mui/icons-material/Facebook';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import GoogleIcon from '@mui/icons-material/Google';
+import { Link } from 'react-router-dom';
 
 export default function Footer() {
     return (
@@ -10,29 +11,29 @@ export default function Footer() {
             <div className="footerSectionBody">
                 <h3 className="footerSectionHeader">CATEGORIES</h3>
                 <ul className="footerSectionList">
-                    <li className="footerSectionListItem"><a href='#' className="footerSectionListItemLink">Women</a></li>
-                    <li className="footerSectionListItem"><a href='#' className="footerSectionListItemLink">Men</a></li>
-                    <li className="footerSectionListItem"><a href='#' className="footerSectionListItemLink">Shose</a></li>
-                    <li className="footerSectionListItem"><a href='#' className="footerSectionListItemLink">Watches</a></li>
+                    <li className="footerSectionListItem"><Link to='#' className="footerSectionListItemLink">Women</Link></li>
+                    <li className="footerSectionListItem"><Link to='#' className="footerSectionListItemLink">Men</Link></li>
+                    <li className="footerSectionListItem"><Link to='#' className="footerSectionListItemLink">Shose</Link></li>
+                    <li className="footerSectionListItem"><Link to='#' className="footerSectionListItemLink">Watches</Link></li>
                 </ul>
             </div>
             <div className="footerSectionBody">
                 <h3 className="footerSectionHeader">Help</h3>
                 <ul className="footerSectionList">
-                    <li className="footerSectionListItem"><a href='#' className="footerSectionListItemLink">Track Order</a></li>
-                    <li className="footerSectionListItem"><a href='#' className="footerSectionListItemLink">Returns</a></li>
-                    <li className="footerSectionListItem"><a href='#' className="footerSectionListItemLink">Shipping</a></li>
-                    <li className="footerSectionListItem"><a href='#' className="footerSectionListItemLink">FAQs</a></li>
+                    <li className="footerSectionListItem"><Link to='#' className="footerSectionListItemLink">Track Order</Link></li>
+                    <li className="footerSectionListItem"><Link to='#' className="footerSectionListItemLink">Returns</Link></li>
+                    <li className="footerSectionListItem"><Link to='#' className="footerSectionListItemLink">Shipping</Link></li>
+                    <li className="footerSectionListItem"><Link to='#' className="footerSectionListItemLink">FAQs</Link></li>
                 </ul>
             </div>
             <div className="footerSectionBody">
                 <h3 className="footerSectionHeader">Get in touch</h3>
                 <p className='about'>Any questions? Let us know in store at 8th floor,<br/> 379 Hudson St, New York, <br/>NY 10018 or call us on (+1) 96 716 6879</p>
                 <ul className="footerSocialList">
-                    <li className="footerSectionListItem"><a href='#' className="footerSocialListItemLink"><FacebookIcon/></a></li>
-                    <li className="footerSectionListItem"><a href='#' className="footerSocialListItemLink"><InstagramIcon/></a></li>
-                    <li className="footerSectionListItem"><a href='#' className="footerSocialListItemLink"><TwitterIcon/></a></li>
-                    <li className="footerSectionListItem"><a href='#' className="footerSocialListItemLink"><GoogleIcon/></a></li>
+                    <li className="footerSectionListItem"><Link to='#' className="footerSocialListItemLink"><FacebookIcon/></Link></li>
+                    <li className="footerSectionListItem"><Link to='#' className="footerSocialListItemLink"><InstagramIcon/></Link></li>
+                    <li className="footerSectionListItem"><Link to='#' className="footerSocialListItemLink"><TwitterIcon/></Link></li>
+                    <li className="footerSectionListItem"><Link to='#' className="footerSocialListItemLink"><GoogleIcon/></Link></li>
                 </ul>
             </div>
             <div className="footerSectionBody">

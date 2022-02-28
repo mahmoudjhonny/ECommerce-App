@@ -22,8 +22,7 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 var initialState = {
-  cart: [],
-  currentItem: null
+  cart: []
 };
 
 var cartReducers = function cartReducers() {
@@ -32,8 +31,6 @@ var cartReducers = function cartReducers() {
 
   switch (action.type) {
     case _productActionTypes.ADD_ITEM:
-      // To get item detailed
-      // const item = state.products.find((prod) => prod.id === action.payload.id);
       var item = {
         id: action.payload.id
       }; // To check if item in cart or no
@@ -62,14 +59,9 @@ var cartReducers = function cartReducers() {
       return _objectSpread({}, state, {
         cart: state.cart.map(function (item) {
           return item.id === action.payload.id ? _objectSpread({}, item, {
-            qty: action.payload.qty
+            qty: +action.payload.qty
           }) : item;
         })
-      });
-
-    case _productActionTypes.LOAD_CURRENT_ITEM:
-      return _objectSpread({}, state, {
-        currentItem: action.payload
       });
 
     default:

@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import './Featuares.css'
 
 const Featuares = () => {
@@ -10,7 +11,7 @@ const Featuares = () => {
                     <p className="cardsInfoDetailes">Spring 2021</p>
                 </div>
                 <div className="shop_btn">
-                    <a href='#'>Shop Now</a>
+                    <Link to='#'>Shop Now</Link>
                 </div>
            </div>
            <div className="cards">
@@ -20,7 +21,7 @@ const Featuares = () => {
                     <p className="cardsInfoDetailes">Spring 2021</p>
                 </div> 
                 <div className="shop_btn">
-                    <a href='#'>Shop Now</a>
+                    <Link to='#'>Shop Now</Link>
                 </div>
            </div>
            <div className="cards card_3">
@@ -30,7 +31,7 @@ const Featuares = () => {
                     <p className="cardsInfoDetailes">New Trend</p>
                 </div>
                 <div className="shop_btn">
-                    <a href='#'>Shop Now</a>
+                    <Link to='#'>Shop Now</Link>
                 </div>
             </div> 
         </div>

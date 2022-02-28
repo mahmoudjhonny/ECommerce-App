@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.loadCurrentItem = exports.adjustQty = exports.removeFromCart = exports.addToCart = void 0;
+exports.adjustQty = exports.removeFromCart = exports.addToCart = void 0;
 
 var _productActionTypes = require("../ActionTypes/productActionTypes");
 
@@ -40,12 +40,3 @@ var adjustQty = function adjustQty(itemId, value) {
 };
 
 exports.adjustQty = adjustQty;
-
-var loadCurrentItem = function loadCurrentItem(item) {
-  return {
-    type: _productActionTypes.LOAD_CURRENT_ITEM,
-    payload: item
-  };
-};
-
-exports.loadCurrentItem = loadCurrentItem;
