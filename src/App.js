@@ -9,6 +9,7 @@ import Cart from './Pages/Cart/Cart'
 import Blog from './Pages/Blog/Blog';
 import Blogdetailed from './Component/BlogDetailed/blogDetailed';
 import About from './Pages/About/About';
+// import FavoriteList from './Component/favoriteList/favoriteList';
 
 function App() {
     return ( 
@@ -22,6 +23,7 @@ function App() {
                 <Route path='/about' element={<About/>}/>
                 <Route path='/detailed' element={<Blogdetailed/>}/>
                 <Route path= '/:id' element={<Productpage/>}/>
+                {/* <Route path='/favoriteList' element={<FavoriteList/>} /> */}
             </Routes>
             <Footer />
         </> 

@@ -10,6 +10,7 @@ import { useSelector } from 'react-redux';
 
 const Navbar = () => {
     const [count, setCount] = useState(0);
+    const [activeFav, setActiveFav] = useState(false)
     const cart = useSelector(state => state.cart);
 
     useEffect(() => {

@@ -1,0 +1,39 @@
+.favoriteContainear {
+    position: fixed;
+    height: 100%;
+    width: 45%;
+    background-color: #fff;
+    right: 0;
+    z-index: 5;
+    top: 69px;
+}
+
+.favoriteContainearInfo::after {
+    content: '';
+    background-color: #333;
+    width: 85%;
+    margin: 0px 25px 20px;
+    height: 2px;
+    position: absolute;
+}
+
+.favCardInfo {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    gap: 30px;
+}
+
+.favCardImage {
+    width: 75px;
+    height: 90px;
+}
+
+.favCardText {
+    color: #333;
+    font-size: 18px;
+}
+
+.cardfavIcon {
+    color: #6c7ae0;
+}
