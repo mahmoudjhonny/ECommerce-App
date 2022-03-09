@@ -1,0 +1,17 @@
+state =false 
+
+onClick =>controle the state
+
+setState(!state)
+
+<component classname={state?"open":"close"} />
+
+
+open{
+    yor code ;
+    for nice design add transtion;
+}
+
+close {
+    display :none
+}
