@@ -4,13 +4,16 @@ import Footer from './Component/Footer/Footer';
 import Navbar from './Component/NavBar/NavBar';
 import Productpage from './Component/productPage/productPage';
 import Shop from './Pages/Shop/Shop';
-import Home from './Pages/Home/Home';
+import { Home } from "./Pages";
 import Cart from './Pages/Cart/Cart'
 import Blog from './Pages/Blog/Blog';
 import Blogdetailed from './Component/BlogDetailed/blogDetailed';
 import About from './Pages/About/About';
-// import FavoriteList from './Component/favoriteList/favoriteList';
 
+// import FavoriteList from './Component/favoriteList/favoriteList';
+//pathes-allias 
+//lazy loading in react 
+//suspence in react 
 function App() {
     return ( 
         <>
