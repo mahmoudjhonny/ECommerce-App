@@ -1,22 +1,22 @@
-import { FETCH_PRODUCT_FAILUAR, FETCH_PRODUCT_REQUAST, FETCH_PRODUCT_SUCCESS } from "../ActionTypes/productActionTypes"
+import * as actionTypes from "../ActionTypes/productActionTypes"
 import axios from "axios"
 
 export const fetchProductRequast = () => {
     return {
-        type: FETCH_PRODUCT_REQUAST
+        type: actionTypes.FETCH_PRODUCT_REQUAST
     }
 }
 
 export const fetchProductSuccess = products => {
     return {
-        type: FETCH_PRODUCT_SUCCESS,
+        type: actionTypes.FETCH_PRODUCT_SUCCESS,
         payload: products
     }
 }
 
 export const fetchProductFailuar = error => {
     return {
-        type: FETCH_PRODUCT_FAILUAR,
+        type: actionTypes.FETCH_PRODUCT_FAILUAR,
         payload: error
     }
 }
