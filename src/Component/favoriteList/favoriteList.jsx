@@ -1,9 +1,9 @@
 import "./favoriteList.css";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 
-const FavoriteList = () => {
+const FavoriteList = ({ activeFav }) => {
   return (
-    <div className="favoriteContainear">
+    <div className={activeFav ? "open favoriteContainear" : "close"}>
       <div className="favoriteContainearInfo">
         <div className="favCardInfo">
           <img
