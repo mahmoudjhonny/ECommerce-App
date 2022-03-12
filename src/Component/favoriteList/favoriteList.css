@@ -1,15 +1,17 @@
 .favoriteContainear {
   position: fixed;
+  width: 30%;
   height: 100%;
-  width: 45%;
   background-color: #fff;
   right: 0;
-  z-index: 5;
+  z-index: 100000000;
   top: 69px;
+  overflow-y: scroll;
 }
 
 .open {
   display: block;
+  animation: fav_list_open 0.7s ease-in-out both;
 }
 
 .close {
@@ -39,9 +41,36 @@
 
 .favCardText {
   color: #333;
-  font-size: 18px;
+  font-size: 15px;
+  flex: 1;
 }
 
 .cardfavIcon {
   color: #6c7ae0;
+}
+
+.favoriteContainearInfo:last-of-type {
+  margin-bottom: 80px;
+}
+
+@keyframes fav_list_open {
+  from {
+    opacity: 0;
+    right: -300px;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 1024px) {
+  .favoriteContainear {
+    width: 45%;
+  }
+}
+
+@media (max-width: 426px) {
+  .favoriteContainear {
+    width: 100%;
+  }
 }
